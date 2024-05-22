@@ -32,6 +32,14 @@ public class Player {
         }
     }
 
+    //change of health by damage
+    public void reduce_health(int damage){
+        if(status) {
+            this.health=this.health-damage;
+            check_ability_to_change_status();
+        }
+    }
+
 
     // setters and getters
 
