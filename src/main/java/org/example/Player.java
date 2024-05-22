@@ -7,15 +7,35 @@ public class Player {
     int y;
 
     //    status of player
-    boolean status;
+    public boolean status;
 
     //    player's health
-    int health;
+    public int health;
 
 //    player's aim
+//    Crosshair crosshair;
+
+    // constructor
+    Player(int x, int y){
+        this.x=x;
+        this.y=y;
+
+        this.status=true;
+        this.health=100;
+    }
 
 
-// setters and getters
+    //change of status by conditions
+    public void check_ability_to_change_status(){
+        if(this.health <= 0){
+            status = false;
+        }
+    }
+
+
+    // setters and getters
+
+        //coordinates
     public int getX() {
         return x;
     }
@@ -32,6 +52,7 @@ public class Player {
         this.y = y;
     }
 
+        //status
     public boolean isStatus() {
         return status;
     }
@@ -40,6 +61,7 @@ public class Player {
         this.status = status;
     }
 
+        //health
     public int getHealth() {
         return health;
     }
