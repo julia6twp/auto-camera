@@ -15,7 +15,7 @@ public class Crosshair {
         this.x=x;
         this.y=y;
     }
-
+//
     public int getX() {
         return x;
     }
